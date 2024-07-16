@@ -1,8 +1,8 @@
 require("dotenv").config();
-require("../populate");
 require("express-async-errors");
 const express = require("express");
 
+require("../populate");
 const connectDb = require("./db/connect");
 const routesProducts = require("./routes/products");
 const routeNotFoundMiddleware = require("./middlewares/route-not-found");

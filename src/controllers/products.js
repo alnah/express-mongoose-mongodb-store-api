@@ -1,3 +1,5 @@
+const Product = require("../models/product");
+
 const getAllProducts = (req, res, next) => {
   res.status(200).json({ message: "get all products" });
 };

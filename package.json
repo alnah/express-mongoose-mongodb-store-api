@@ -1,0 +1,31 @@
+{
+  "name": "express-mongoose-mongodb-store-api",
+  "version": "1.0.0",
+  "description": "An Express.js app showing REST API principles, MongoDB integration via Mongoose and filtering queries.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "clear && nodemon ./src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "express-mongoose-mongodb-store-api"
+  },
+  "author": "alnah <alexis.nahan@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-prettier": "^5.1.3",
+    "nodemon": "^3.1.4",
+    "prettier": "^3.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-async-errors": "^3.1.1",
+    "mongoose": "^8.5.1"
+  }
+}

@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 
 const connectDb = require("./db/connect");
+const routesProducts = require("./routes/products");
 const routeNotFoundMiddleware = require("./middlewares/route-not-found");
 const errorHandlerMiddleware = require("./middlewares/error-handler");
 
@@ -17,6 +18,7 @@ app.get("/", (req, res) => {
   res.send(responseHtml);
 });
 
+app.use("/api/v1/", routesProducts);
 app.use(routeNotFoundMiddleware);
 app.use(errorHandlerMiddleware);
 

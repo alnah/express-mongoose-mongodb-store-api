@@ -1,4 +1,5 @@
 require("dotenv").config();
+require("../populate");
 require("express-async-errors");
 const express = require("express");
 

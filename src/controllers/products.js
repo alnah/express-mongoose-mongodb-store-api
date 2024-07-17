@@ -1,7 +1,15 @@
 const Product = require("../models/product");
 
-const getAllProducts = (req, res, next) => {
-  res.status(200).json({ message: "get all products" });
+const getAllProducts = async (req, res, next) => {
+  const { featured, company, name } = req.query;
+  const query = {};
+
+  featured ? (query.featured = featured === "true") : false;
+  company ? (query.company = company) : null;
+  name ? (query.name = { $regex: name, $options: "i" }) : null;
+
+  const products = await Product.find(query);
+  res.status(200).json({ products, query });
 };
 
 const createProduct = (req, res, next) => {
